@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rethinking data visualization · D.E. Shaw case study</title>
+<meta name="description" content="Interaction design case study, D.E. Shaw, Summer 2026: rethinking an in-house data visualization tool, AI-first, for company-wide adoption.">
+<meta property="og:title" content="Rethinking data visualization for better company-wide adoption">
+<meta property="og:description" content="Interaction design case study · D.E. Shaw · Summer 2026">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200..600&amp;display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="page">
+  <nav class="rail" aria-label="Chapters">
+    <div class="rail-track" aria-hidden="true"><i></i></div>
+    <ol><li><a href="#ch1">01</a></li><li><a href="#ch2">02</a></li><li><a href="#ch3">03</a></li><li><a href="#ch4">04</a></li><li><a href="#ch5">05</a></li><li><a href="#ch6">06</a></li><li><a href="#ch7">07</a></li><li><a href="#ch8">08</a></li></ol>
+  </nav>
+
+  <header class="hero" data-hero>
+    <div class="wrap hero-meta">
+      <svg class="logo" viewBox="0 0 90 21" role="img" aria-label="D.E. Shaw"><path fill="currentColor" d="M20.0107 8.84774V11.5146H19.5639C19.117 9.61174 18.7999 9.35227 17.2286 9.35227H15.4988V13.4174C17.6755 13.3885 18.007 13.0426 18.0647 11.8173H18.5548V15.5076H18.0503C17.9926 14.3111 17.6466 13.9652 15.4988 13.9507V18.6213H15.7871C19.1314 18.6213 19.5206 17.8429 19.7657 16.041H20.2702L20.0107 19.1258H12.6157V18.6213H13.9275V9.33786H12.6157V8.84774H20.0107ZM69.8299 5.22951H86.4507V5.73404H69.8299V5.22951ZM68.1145 0.400391L56.5534 5.25833H0.449219V5.76287H56.6543L68.3163 0.890511L68.1145 0.443637M6.83518 18.8375C5.92702 19.0826 5.00444 19.1691 4.06745 19.1258H0.449219V18.6213H1.76101V9.33786H0.449219V8.84774H4.06745C4.99003 8.80449 5.92702 8.9054 6.82077 9.13604C8.85332 9.74148 9.89122 11.3992 9.89122 13.994C9.89122 16.5887 8.86773 18.2465 6.83518 18.8375ZM6.46038 9.71265C5.69637 9.42435 4.87471 9.30903 4.06745 9.33786H3.33227V18.6213H4.06745C4.88912 18.6645 5.69637 18.5348 6.46038 18.2753C7.65685 17.7131 8.16139 16.459 8.16139 13.994C8.16139 11.529 7.68568 10.2748 6.46038 9.71265ZM54.1317 19.1402L55.7462 12.2209H56.7552V11.7164H53.9443V12.2209H55.184L53.9154 17.5834L53.6127 16.3581L52.4595 12.4083H51.4072L49.9224 17.5834L49.6773 16.3437L48.6971 12.2065H49.8215V11.702H46.3763V12.2065H47.3565L49.0142 19.1114H50.0666L51.5658 13.8066L51.9117 15.1616L53.0794 19.1114L54.1317 19.1402ZM83.4956 11.6011C85.8308 11.6011 86.9408 12.7975 86.9408 15.4499C86.9408 18.1023 85.8308 19.2988 83.4956 19.2988C81.1603 19.2988 80.0647 18.0591 80.0647 15.4355C80.0647 12.7975 81.1603 11.5866 83.4956 11.5866M83.4956 12.0768C82.6595 12.0768 81.6072 12.4804 81.6072 15.4211C81.6072 18.3618 82.6595 18.7654 83.4956 18.7654C84.3317 18.7654 85.3984 18.3618 85.3984 15.4211C85.3984 12.4804 84.3461 12.0479 83.4956 12.0479V12.0768ZM78.8827 9.15046C77.9601 8.8189 76.9654 8.66034 75.9852 8.70358C72.54 8.70358 70.8101 10.5487 70.8101 13.994C70.8101 17.3672 72.5255 19.2844 75.9852 19.2844C76.9799 19.2988 77.9601 19.1114 78.8683 18.7222L79.0989 16.0698H78.5944C78.2628 17.7708 77.3547 18.751 75.8843 18.751C75.1491 18.8087 74.4284 18.5636 73.8662 18.0735C73.0877 17.3239 72.6697 15.9977 72.6697 14.0084C72.6697 12.0191 73.1022 10.5776 73.9527 9.84239C74.4428 9.42435 75.0771 9.22253 75.7113 9.23695C77.297 9.23695 78.1475 10.2172 78.4214 11.5001H78.8683L78.8827 9.15046ZM29.7987 9.17929C28.977 8.86215 28.0977 8.70358 27.204 8.73241C25.0417 8.73241 23.8164 9.77031 23.8164 11.4137C23.8164 12.884 24.6092 13.6336 25.9787 14.1958L27.3769 14.7868C27.3769 14.7868 28.8185 15.9112 28.8185 16.8626C28.8185 18.0879 28.1265 18.7654 26.8292 18.7654C25.5318 18.7654 24.4795 17.7996 24.0758 16.0554H23.629L23.8596 18.7366C24.7101 19.1114 25.6471 19.2988 26.5697 19.2844C28.7752 19.2844 30.2456 18.16 30.2456 16.2139C30.2456 14.5562 29.3374 13.9075 27.9824 13.3453L26.6273 12.7831C25.6759 12.3939 25.2723 11.9182 25.2723 10.8803C25.2723 9.84239 26.0363 9.25136 27.0166 9.25136C28.2995 9.25136 29.0203 10.0298 29.3086 11.5434H29.7987V9.17929ZM38.001 13.6624C38.001 12.1632 37.0496 11.529 35.9684 11.529C34.9594 11.5001 34.0224 12.0191 33.5178 12.884V8.81891H31.0817V9.32344H32.0907V18.6213H31.0817V19.1258H34.5846V18.6213H33.5178V14.5562C33.5034 14.0661 33.6332 13.5904 33.8638 13.1579C34.1809 12.5957 34.772 12.2353 35.4351 12.2209C36.1702 12.2209 36.5739 12.7399 36.5739 13.6624V18.6357H35.5216V19.1402H39.0101V18.6213H38.001V13.6336M45.5113 16.8482V13.5904C45.5113 12.0912 44.4302 11.5578 42.7724 11.5578C41.1147 11.5578 39.9615 12.1488 39.9615 13.2156C39.9615 13.6336 40.293 13.9652 40.7111 13.9796H40.7975C41.057 14.0084 41.3165 13.9075 41.5039 13.7057V13.3597C41.5039 12.5092 41.9219 12.0335 42.7436 12.0335C43.3923 11.947 43.9833 12.4083 44.0554 13.0426C44.0698 13.1291 44.0698 13.2156 44.0554 13.3165V14.4264L41.6048 15.2049C40.9273 15.4499 39.7885 15.8536 39.7885 17.1798C39.7885 18.6501 40.812 19.2988 42.1526 19.2988C43.2337 19.2988 43.9689 18.924 44.3293 18.1023C44.5311 19.0105 45.4104 19.3709 46.4339 19.1691V18.7222C45.9294 18.5636 45.5258 17.9438 45.5258 16.8626M44.1275 16.8482C44.1275 18.0447 43.6374 18.6069 42.7292 18.6069C41.9219 18.6069 41.4606 18.0591 41.4606 17.1653C41.4606 15.8824 42.1237 15.6517 43.0031 15.349L44.1275 14.9598V16.8482ZM66.4711 17.8284C67.3793 16.877 67.855 15.5941 67.7829 14.2679C67.7685 13.648 67.6676 13.0426 67.4802 12.4516H65.044V12.8984C65.6062 12.8696 66.1684 13.057 66.5865 13.4318C66.9613 13.8498 67.1631 14.412 67.1198 14.9742C67.1198 15.8968 66.7594 16.7905 66.1252 17.4681C66.0243 17.3527 65.8369 17.1798 65.736 17.0644C64.2368 15.5508 62.9394 13.8354 61.9159 11.9758C61.6997 11.5722 61.5699 11.1109 61.5555 10.6496C61.4979 9.88563 62.0745 9.22253 62.8385 9.16487C62.9106 9.16487 62.9682 9.16487 63.0403 9.16487C64.0061 9.16487 64.7413 9.72707 65.0729 11.4281H65.5197V9.16487C64.799 8.83332 64.0061 8.67475 63.2133 8.718C61.4979 8.718 60.287 9.52525 60.287 11.183C60.3014 11.7308 60.4311 12.2642 60.6762 12.7687C59.4509 13.1867 58.6581 14.3544 58.7013 15.6517C58.7013 17.4392 60.0563 19.3421 62.7664 19.3421C63.7034 19.3709 64.626 19.1402 65.4476 18.6789C66.1972 19.0537 67.0045 19.27 67.8406 19.3132L67.9847 18.9096C67.437 18.6213 66.9324 18.2609 66.4711 17.8573M63.5304 18.7078C62.6078 18.7222 61.7141 18.3762 61.0366 17.7275C60.3735 17.0356 60.0131 16.113 60.0275 15.1472C59.9698 14.3688 60.2437 13.6048 60.7915 13.057C61.7429 14.8445 62.9826 16.4734 64.4386 17.8861C64.6116 18.0591 64.799 18.2321 65.0008 18.3906C64.5539 18.5925 64.0494 18.7078 63.5304 18.7078Z"/></svg>
+      <p>Interaction Design Intern · Summer 2026 · 8 weeks</p>
+    </div>
+    <div class="wrap hero-title">
+      <h1 aria-label="Rethinking data visualization for better company-wide adoption"><span class="mw" aria-hidden="true"><span style="--i:0">Rethinking</span></span> <span class="mw" aria-hidden="true"><span style="--i:1">data</span></span> <span class="mw" aria-hidden="true"><span style="--i:2">visualization</span></span> <span class="mw" aria-hidden="true"><span style="--i:3">for</span></span> <span class="mw" aria-hidden="true"><span style="--i:4">better</span></span> <span class="mw" aria-hidden="true"><span style="--i:5">company-wide</span></span> <span class="mw" aria-hidden="true"><span style="--i:6">adoption</span></span></h1>
+    </div>
+    <div class="hero-chart" aria-hidden="true">
+      <svg class="draw" viewBox="0 0 1200 300" preserveAspectRatio="none"><path d="M0.0,139.8 L100.0,189.0 L200.0,260.0 L300.0,221.1 L400.0,237.7 L500.0,219.9 L600.0,92.4 L700.0,74.1 L800.0,94.2 L900.0,56.5 L1000.0,125.5 L1100.0,175.3 L1200.0,93.7" class="on"/><path d="M0.0,172.6 L100.0,257.5 L200.0,214.0 L300.0,130.5 L400.0,141.4 L500.0,89.0 L600.0,69.3 L700.0,176.0 L800.0,193.0 L900.0,176.6 L1000.0,216.2 L1100.0,136.5 L1200.0,54.5"/><path d="M0.0,196.3 L100.0,181.6 L200.0,75.3 L300.0,89.0 L400.0,155.0 L500.0,141.5 L600.0,204.2 L700.0,243.3 L800.0,145.4 L900.0,117.6 L1000.0,112.8 L1100.0,46.2 L1200.0,106.1"/><path d="M0.0,128.4 L100.0,112.7 L200.0,111.4 L300.0,221.0 L400.0,225.7 L500.0,173.2 L600.0,189.0 L700.0,113.8 L800.0,46.2 L900.0,118.9 L1000.0,137.7 L1100.0,146.4 L1200.0,229.6"/><path d="M0.0,204.5 L100.0,186.9 L200.0,217.6 L300.0,232.6 L400.0,119.6 L500.0,92.0 L600.0,119.0 L700.0,82.7 L800.0,150.8 L900.0,231.7 L1000.0,176.9 L1100.0,165.7 L1200.0,152.4"/></svg>
+      <i class="hero-dot" style="top:calc((100% - 24px) * 0.312)"></i>
+      <i class="hero-axis"></i>
+      <div class="hero-ticks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="wrap">
+      <div class="intro">
+        <p class="lead intro-lead" data-r="0">D.E. Shaw is a major international hedge fund, where decisions run on data. I spent the summer of 2026 there as an interaction design intern, working on one of the firm's key in-house tools used across business units to turn data into charts, dashboards and shared reports.</p>
+        <p class="p intro-aside" data-r="1">Over four weekly sprints, I took its redesign from research to a working MVP prototype, along with a multi-state component library and the interaction logic behind it.</p>
+      </div>
+      <div class="capable">
+        <p data-fill style="--n:15;margin-bottom:40px"><span class="wd" style="--i:0">The</span> <span class="wd" style="--i:1">tool</span> <span class="wd" style="--i:2">itself</span> <span class="wd" style="--i:3">was</span> <span class="wd" style="--i:4">remarkably</span> <span class="wd" style="--i:5">capable.</span> <span class="wd" style="--i:6">It</span> <span class="wd" style="--i:7">could</span> <span class="wd" style="--i:8">handle</span> <span class="wd" style="--i:9">almost</span> <span class="wd" style="--i:10">any</span> <span class="wd" style="--i:11">chart</span> <span class="wd" style="--i:12">a</span> <span class="wd" style="--i:13">team</span> <span class="wd" style="--i:14">needed.</span></p>
+        <p data-fill style="--n:18;color:var(--muted)"><span class="wd" style="--i:0">And</span> <span class="wd" style="--i:1">yet,</span> <span class="wd" style="--i:2">people</span> <span class="wd" style="--i:3">used</span> <span class="wd" style="--i:4">it</span> <span class="wd" style="--i:5">reluctantly,</span> <span class="wd" style="--i:6">and</span> <span class="wd" style="--i:7">often</span> <span class="wd" style="--i:8">ended</span> <span class="wd" style="--i:9">up</span> <span class="wd" style="--i:10">in</span> <span class="wd hl" style="--i:11">Excel</span> <span class="wd" style="--i:12">or</span> <span class="wd hl" style="--i:13">a</span> <span class="wd hl" style="--i:14">general-purpose</span> <span class="wd hl" style="--i:15">AI</span> <span class="wd hl" style="--i:16">assistant</span> <span class="wd" style="--i:17">instead.</span></p>
+      </div>
+    </section>
+
+    <section class="wrap stack" data-steps>
+      <div class="story">
+        <div class="steps">
+          <div class="step" data-step id="ch1" data-ch="1">
+            <h2 class="h2"><span class="num">01</span><span>Why would people work around a tool built for exactly this?</span></h2>
+            <p class="p">Picture an analyst who needs a simple chart: how trading volume has changed by region over the past year.</p>
+          </div>
+          <div class="step" data-step>
+            <p class="p">The tool can build it. Over the years, it has grown from a simple chart-and-table tool into something that can handle almost any chart. But between what the analyst wants and the chart itself sat panels, settings and a long list of fields. For many people, it wasn't worth the effort, and adoption stayed low.</p>
+          </div>
+          <div class="step" data-step>
+            <p class="lead">AI had arrived as one more layer on top. It could make the chart, but it sat apart from the rest of the work.</p>
+          </div>
+          <div class="step" data-step>
+            <blockquote><p class="quote">My brief was not to polish it, but to rethink it from the ground up, AI-first. The team wanted more control, without the complexity. Context on what is happening, without the labour of scavenging for the right data.</p></blockquote>
+          </div>
+          <div class="step" data-step id="ch2" data-ch="2">
+            <h2 class="h2" style="margin:0"><span class="num">02</span><span>What if AI wasn't another layer?</span></h2>
+          </div>
+          <div class="step" data-step>
+            <p class="p">Imagine the same chart, but the AI is already where the analyst is working: in the data, in the chart, in each setting, with a conversation there when it's needed.</p>
+          </div>
+          <div class="step" data-step>
+            <div class="pair"><p>It does the hunting.</p><p>The analyst makes the decisions.</p></div>
+          </div>
+          <div class="step" data-step>
+            <p class="lead">That was the lens for this redesign: AI integrated at a molecular level, with a human in the loop.</p>
+          </div>
+        </div>
+        <figure class="stage persp">
+          <figcaption class="vh">Abstract diagram: features stacking up with AI as the top layer, then AI woven through every step.</figcaption>
+          <div class="world" aria-hidden="true">
+            <div class="ly ly-chart"><svg viewBox="0 0 300 150" preserveAspectRatio="none"><path d="M0.0,116.3 L37.5,141.0 L75.0,120.7 L112.5,70.9 L150.0,68.2 L187.5,33.9 L225.0,15.9 L262.5,61.1 L300.0,61.5" class="on"/><path d="M0.0,90.6 L37.5,84.6 L75.0,32.6 L112.5,40.8 L150.0,75.0 L187.5,69.5 L225.0,102.1 L262.5,122.9 L300.0,75.2"/><path d="M0.0,56.7 L37.5,50.1 L75.0,50.7 L112.5,106.8 L150.0,110.4 L187.5,85.3 L225.0,94.5 L262.5,58.1 L300.0,25.6"/><path d="M0.0,94.7 L37.5,87.2 L75.0,103.8 L112.5,112.6 L150.0,57.3 L187.5,44.8 L225.0,59.5 L262.5,42.6 L300.0,77.9"/></svg></div>
+            <div class="ly ly-glass ly-fields"><i class="fbar" style="top:18px;width:60px"></i><i class="fbar" style="top:38px;width:97px"></i><i class="fbar" style="top:58px;width:64px"></i><i class="fbar" style="top:78px;width:101px"></i><i class="fbar" style="top:98px;width:68px"></i><i class="fbar" style="top:118px;width:105px"></i><i class="fbar" style="top:138px;width:72px"></i><i class="fbar" style="top:158px;width:109px"></i><i class="fbar" style="top:178px;width:76px"></i><i class="fbar" style="top:198px;width:113px"></i><i class="fbar" style="top:218px;width:80px"></i><i class="fbar" style="top:238px;width:117px"></i><i class="fbar" style="top:258px;width:84px"></i></div>
+            <div class="ly ly-glass ly-settings"><i class="trow" style="top:25px;width:70px"></i><i class="tog r" style="top:22px"></i><i class="trow" style="top:63px;width:99px"></i><i class="tog l" style="top:60px"></i><i class="trow" style="top:101px;width:128px"></i><i class="tog l" style="top:98px"></i><i class="trow" style="top:139px;width:77px"></i><i class="tog r" style="top:136px"></i><i class="trow" style="top:177px;width:106px"></i><i class="tog l" style="top:174px"></i><i class="trow" style="top:215px;width:135px"></i><i class="tog l" style="top:212px"></i><i class="trow" style="top:253px;width:84px"></i><i class="tog r" style="top:250px"></i></div>
+            <div class="ly ly-glass ly-panels">
+              <i class="pnl" style="left:16px;top:16px;width:130px;height:120px"></i>
+              <i class="pnl" style="left:16px;top:150px;width:130px;height:134px"></i>
+              <i class="pnl" style="left:160px;top:16px;width:264px;height:54px"></i>
+              <i class="pnl" style="right:16px;bottom:16px;width:120px;height:70px"></i>
+            </div>
+            <div class="ly ly-ai"></div>
+            <i class="bead keep" style="left:110px;top:90px;--z:8px;--d:0.00s"></i><i class="bead" style="left:110px;top:90px;--z:38px;--d:0.05s"></i><i class="bead" style="left:110px;top:90px;--z:68px;--d:0.10s"></i><i class="bead" style="left:110px;top:90px;--z:98px;--d:0.15s"></i><i class="bead" style="left:110px;top:90px;--z:128px;--d:0.20s"></i><i class="bead" style="left:110px;top:90px;--z:158px;--d:0.25s"></i><i class="bead" style="left:110px;top:90px;--z:188px;--d:0.30s"></i><i class="bead" style="left:110px;top:90px;--z:218px;--d:0.35s"></i><i class="bead" style="left:110px;top:90px;--z:248px;--d:0.40s"></i><i class="bead keep" style="left:232px;top:118px;--z:8px;--d:0.12s"></i><i class="bead" style="left:232px;top:118px;--z:38px;--d:0.17s"></i><i class="bead" style="left:232px;top:118px;--z:68px;--d:0.22s"></i><i class="bead" style="left:232px;top:118px;--z:98px;--d:0.27s"></i><i class="bead" style="left:232px;top:118px;--z:128px;--d:0.32s"></i><i class="bead" style="left:232px;top:118px;--z:158px;--d:0.37s"></i><i class="bead" style="left:232px;top:118px;--z:188px;--d:0.42s"></i><i class="bead" style="left:232px;top:118px;--z:218px;--d:0.47s"></i><i class="bead" style="left:232px;top:118px;--z:248px;--d:0.52s"></i><i class="bead keep" style="left:340px;top:210px;--z:8px;--d:0.24s"></i><i class="bead" style="left:340px;top:210px;--z:38px;--d:0.29s"></i><i class="bead" style="left:340px;top:210px;--z:68px;--d:0.34s"></i><i class="bead" style="left:340px;top:210px;--z:98px;--d:0.39s"></i><i class="bead" style="left:340px;top:210px;--z:128px;--d:0.44s"></i><i class="bead" style="left:340px;top:210px;--z:158px;--d:0.49s"></i><i class="bead" style="left:340px;top:210px;--z:188px;--d:0.54s"></i><i class="bead" style="left:340px;top:210px;--z:218px;--d:0.59s"></i><i class="bead" style="left:340px;top:210px;--z:248px;--d:0.64s"></i>
+            <i class="human" style="left:232px;top:118px"></i>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="ctrl" data-scene data-def="1">
+      <div class="pin">
+        <div class="wrap">
+          <p style="--n:8"><span class="wd" style="--i:0">Designing</span> <span class="wd" style="--i:1">for</span> <span class="wd" style="--i:2">AI</span> <span class="wd" style="--i:3">is</span> <span class="wd" style="--i:4">mostly</span> <span class="wd" style="--i:5">designing</span> <span class="wd" style="--i:6">for</span> <span class="wd last" style="--i:7">control.</span></p>
+          <div class="slider" aria-hidden="true"><i class="t"></i><i class="f"></i><i class="k"></i></div>
+          <div class="ticks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap whatif-intro">
+      <p class="lead" data-r="0">Each what-if below is a question I set out to answer, and each answer became a working prototype.</p>
+      <ol class="whatifs" data-r="1">
+        <li><a href="#ch3"><span>03</span>How do you know an AI interaction works before it's built?</a></li>
+        <li><a href="#ch4"><span>04</span>Where does a chart actually begin?</a></li>
+        <li><a href="#ch5"><span>05</span>What happens between an idea and a chart?</a></li>
+      </ol>
+    </section>
+
+    <section class="wrap" id="ch3" data-ch="3" style="padding-bottom:40px">
+      <h2 class="h2" data-r="0"><span class="num">03</span><span>How do you know an AI interaction works before it's built?</span></h2>
+      <p class="big huge" data-r="1">You build it.</p>
+    </section>
+
+    <section class="hz" data-scene data-h>
+      <p class="vh">Abstract diagram: four weekly cycles, with AI running through all of them.</p>
+      <div class="pin">
+        <div class="track" data-track>
+          <div class="panel text"><p class="lead">After initial research and onboarding, I worked in 4 weekly sprints, each on a functional foundation of the product. AI was never a sprint of its own. It ran through every one of them.</p></div>
+          <div class="panel wk" aria-hidden="true">
+            <div class="wk-n">1</div>
+            <div class="cyc" style="--a:0"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46"/><path d="M50 4 A46 46 0 0 1 96 50"/><path d="M90 40 L96 50 L102 40"/></svg></div>
+          </div>
+          <div class="panel wk" aria-hidden="true">
+            <div class="wk-n">2</div>
+            <div class="cyc" style="--a:90"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46"/><path d="M50 4 A46 46 0 0 1 96 50"/><path d="M90 40 L96 50 L102 40"/></svg></div>
+          </div>
+          <div class="panel wk" aria-hidden="true">
+            <div class="wk-n">3</div>
+            <div class="cyc" style="--a:180"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46"/><path d="M50 4 A46 46 0 0 1 96 50"/><path d="M90 40 L96 50 L102 40"/></svg></div>
+          </div>
+          <div class="panel wk" aria-hidden="true">
+            <div class="wk-n">4</div>
+            <div class="cyc" style="--a:270"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46"/><path d="M50 4 A46 46 0 0 1 96 50"/><path d="M90 40 L96 50 L102 40"/></svg></div>
+          </div>
+          <div class="panel text last"><p class="lead">I turned the research into the questions each sprint set out to answer. Each idea became working code in Cursor, then was refined through weekly feedback from the product manager and the design team.</p></div>
+          <i class="thread" aria-hidden="true" style="left:calc(var(--gut-l) + 600px);width:1920px"></i>
+          <i class="knot" aria-hidden="true" style="left:calc(var(--gut-l) + 707px);--t:0.18"></i><i class="knot" aria-hidden="true" style="left:calc(var(--gut-l) + 1187px);--t:0.31"></i><i class="knot" aria-hidden="true" style="left:calc(var(--gut-l) + 1667px);--t:0.44"></i><i class="knot" aria-hidden="true" style="left:calc(var(--gut-l) + 2147px);--t:0.57"></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap fields" data-steps style="padding-top:120px">
+      <div class="story">
+        <div class="steps">
+          <div class="step" data-step id="ch4" data-ch="4">
+            <h2 class="h2"><span class="num">04</span><span>Where does a chart actually begin?</span></h2>
+            <p class="big">Before anyone starts building one.</p>
+          </div>
+          <div class="step" data-step>
+            <p class="p">Back to our analyst. Before any chart, they need the right fields, in a dataset they may never have opened.</p>
+            <ul class="qs"><li>Is there a region field?</li><li>Which one is volume?</li><li>Is there a date to track change over?</li></ul>
+          </div>
+          <div class="step" data-step>
+            <p class="lead">The answers sat in one long list, each field labelled in technical terms.</p>
+          </div>
+          <div class="step" data-step>
+            <p class="p">Now suppose the dataset could introduce itself, showing what it covers in plain terms before a single field.</p>
+          </div>
+          <div class="step" data-step>
+            <p class="lead">Suppose fields came in groups people already reason with.</p>
+          </div>
+          <div class="step" data-step>
+            <div class="coffee">
+              <p>Think of a coffee order:</p>
+              <div class="crow"><span class="tag">dimensions</span><span>The size and the flavour are dimensions, things you sort by.</span></div>
+              <div class="crow"><span class="tag m">measure</span><span>The price is a measure, something you add up.</span></div>
+              <div class="crow"><span class="tag t">time</span><span>And when you ordered it is time.</span></div>
+            </div>
+          </div>
+          <div class="step" data-step>
+            <p class="p">For our analyst, region is a dimension and volume is a measure. And suppose a search for "geography" still found region.</p>
+          </div>
+          <div class="step" data-step>
+            <p class="big" style="color:var(--ink)">The hunt would mostly disappear.</p>
+          </div>
+        </div>
+        <figure class="stage">
+          <figcaption class="vh">Abstract diagram: context in layers, from dataset to field.</figcaption>
+          <div class="board" aria-hidden="true">
+            <div class="empty"><i></i></div>
+            <div class="search"><span class="typed">geography</span><i></i></div>
+            <div class="sum"><i style="width:46%"></i><i style="width:38%"></i><i style="width:52%"></i><i style="width:30%;margin:0"></i><svg viewBox="0 0 120 60" preserveAspectRatio="none"><path d="M0.0,48.3 L17.1,42.4 L34.3,18.2 L51.4,18.0 L68.6,28.3 L85.7,22.7 L102.9,32.3 L120.0,37.2"/></svg></div>
+            <div class="bin lab" style="left:0">dimension</div>
+            <div class="bin lab" style="left:180px">measure</div>
+            <div class="bin lab" style="left:360px">time</div>
+            <div class="list"><div class="scan"></div><div class="chip" style="--w:70px;--ly:6px;--gx:0px;--gy:76px;--d:0.000s"></div><div class="chip" style="--w:123px;--ly:31px;--gx:180px;--gy:76px;--d:0.025s"></div><div class="chip" style="--w:176px;--ly:56px;--gx:0px;--gy:102px;--d:0.050s"></div><div class="chip" style="--w:79px;--ly:81px;--gx:360px;--gy:76px;--d:0.075s"></div><div class="chip named k-volume" style="--w:132px;--ly:106px;--gx:180px;--gy:102px;--d:0.100s">volume</div><div class="chip" style="--w:185px;--ly:131px;--gx:0px;--gy:128px;--d:0.125s"></div><div class="chip" style="--w:88px;--ly:156px;--gx:0px;--gy:154px;--d:0.150s"></div><div class="chip" style="--w:141px;--ly:181px;--gx:180px;--gy:128px;--d:0.175s"></div><div class="chip" style="--w:194px;--ly:206px;--gx:360px;--gy:102px;--d:0.200s"></div><div class="chip" style="--w:97px;--ly:231px;--gx:0px;--gy:180px;--d:0.225s"></div><div class="chip" style="--w:150px;--ly:256px;--gx:180px;--gy:154px;--d:0.250s"></div><div class="chip" style="--w:203px;--ly:281px;--gx:0px;--gy:206px;--d:0.275s"></div><div class="chip named k-region" style="--w:106px;--ly:306px;--gx:0px;--gy:232px;--d:0.300s">region</div><div class="chip" style="--w:159px;--ly:331px;--gx:360px;--gy:128px;--d:0.325s"></div><div class="chip" style="--w:212px;--ly:356px;--gx:180px;--gy:180px;--d:0.350s"></div><div class="chip" style="--w:115px;--ly:381px;--gx:0px;--gy:258px;--d:0.375s"></div><div class="chip" style="--w:168px;--ly:406px;--gx:180px;--gy:206px;--d:0.400s"></div><div class="chip named k-date" style="--w:71px;--ly:431px;--gx:360px;--gy:154px;--d:0.425s">date</div><div class="chip" style="--w:124px;--ly:456px;--gx:0px;--gy:284px;--d:0.450s"></div><div class="chip" style="--w:177px;--ly:481px;--gx:180px;--gy:232px;--d:0.475s"></div><div class="chip" style="--w:80px;--ly:506px;--gx:360px;--gy:180px;--d:0.500s"></div></div>
+            <div class="fchart"><svg viewBox="0 0 300 150" preserveAspectRatio="none"><path d="M0.0,116.3 L37.5,141.0 L75.0,120.7 L112.5,70.9 L150.0,68.2 L187.5,33.9 L225.0,15.9 L262.5,61.1 L300.0,61.5" class="on"/><path d="M0.0,90.6 L37.5,84.6 L75.0,32.6 L112.5,40.8 L150.0,75.0 L187.5,69.5 L225.0,102.1 L262.5,122.9 L300.0,75.2"/><path d="M0.0,56.7 L37.5,50.1 L75.0,50.7 L112.5,106.8 L150.0,110.4 L187.5,85.3 L225.0,94.5 L262.5,58.1 L300.0,25.6"/><path d="M0.0,94.7 L37.5,87.2 L75.0,103.8 L112.5,112.6 L150.0,57.3 L187.5,44.8 L225.0,59.5 L262.5,42.6 L300.0,77.9"/></svg><i class="ax"></i></div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="wrap idea" data-steps style="padding-top:80px">
+      <div class="story">
+        <div class="steps">
+          <div class="step" data-step id="ch5" data-ch="5">
+            <h2 class="h2"><span class="num">05</span><span>What happens between an idea and a chart?</span></h2>
+            <p class="p">The analyst knows what they want to see. Getting there usually meant one of two things:</p>
+            <div class="two"><p>an AI-made chart that was hard to adjust,</p><p>or an empty builder waiting to be filled in.</p></div>
+          </div>
+          <div class="step" data-step>
+            <p class="lead">But what if they could describe the chart in their own words, and get back something they could read: a plain description of the chart where every part can be changed? Fixing one word would replace starting over.</p>
+          </div>
+          <div class="step" data-step>
+            <div class="wi"><div><p>What if the AI knew which part of the chart they meant?</p><p>They wouldn't need to explain it.</p></div></div>
+          </div>
+          <div class="step" data-step>
+            <div class="wi"><div><p>And what if it showed what it was doing while it worked?</p><p>A wrong answer would become a small correction, not a dead end.</p></div></div>
+          </div>
+        </div>
+        <figure class="stage">
+          <figcaption class="vh">Abstract diagram: intent, readable description, chart, with the human at each checkpoint.</figcaption>
+          <div class="board" aria-hidden="true">
+            <div class="opt" style="left:0">
+              <svg viewBox="0 0 300 150" preserveAspectRatio="none"><path d="M0.0,116.3 L37.5,141.0 L75.0,120.7 L112.5,70.9 L150.0,68.2 L187.5,33.9 L225.0,15.9 L262.5,61.1 L300.0,61.5"/><path d="M0.0,90.6 L37.5,84.6 L75.0,32.6 L112.5,40.8 L150.0,75.0 L187.5,69.5 L225.0,102.1 L262.5,122.9 L300.0,75.2"/><path d="M0.0,56.7 L37.5,50.1 L75.0,50.7 L112.5,106.8 L150.0,110.4 L187.5,85.3 L225.0,94.5 L262.5,58.1 L300.0,25.6"/><path d="M0.0,94.7 L37.5,87.2 L75.0,103.8 L112.5,112.6 L150.0,57.3 L187.5,44.8 L225.0,59.5 L262.5,42.6 L300.0,77.9"/></svg>
+              <svg class="lock" viewBox="0 0 16 20"><rect x="1" y="9" width="14" height="10"/><path d="M4 9 V5 A4 4 0 0 1 12 5 V9"/></svg>
+            </div>
+            <div class="opt" style="left:288px">
+              <i class="ghost" style="top:40px;height:22px"></i>
+              <i class="ghost" style="top:76px;height:22px;right:80px"></i>
+              <i class="ghost" style="top:112px;height:150px"></i>
+            </div>
+            <div class="prompt"><span class="pw" style="--i:0">how</span> <span class="pw" style="--i:1">trading</span> <span class="pw" style="--i:2">volume</span> <span class="pw" style="--i:3">has</span> <span class="pw" style="--i:4">changed</span> <span class="pw" style="--i:5">by</span> <span class="pw" style="--i:6">region</span> <span class="pw" style="--i:7">over</span> <span class="pw" style="--i:8">the</span> <span class="pw" style="--i:9">past</span> <span class="pw" style="--i:10">year</span></div>
+            <i class="chk" style="top:106px;--d:.1s"></i>
+            <div class="desc">
+              <span class="dc" style="--i:0">trading volume</span>
+              <span class="dc pick" style="--i:1">by region</span>
+              <span class="dc fix" style="--i:2">over the past year</span>
+            </div>
+            <i class="chk" style="top:180px;--d:.3s"></i>
+            <div class="ichart">
+              <div class="legend"><i></i><i></i><i></i><i></i></div>
+              <svg viewBox="0 0 300 150" preserveAspectRatio="none"><path d="M0.0,116.3 L37.5,141.0 L75.0,120.7 L112.5,70.9 L150.0,68.2 L187.5,33.9 L225.0,15.9 L262.5,61.1 L300.0,61.5" class="on"/><path d="M0.0,90.6 L37.5,84.6 L75.0,32.6 L112.5,40.8 L150.0,75.0 L187.5,69.5 L225.0,102.1 L262.5,122.9 L300.0,75.2"/><path d="M0.0,56.7 L37.5,50.1 L75.0,50.7 L112.5,106.8 L150.0,110.4 L187.5,85.3 L225.0,94.5 L262.5,58.1 L300.0,25.6"/><path d="M0.0,94.7 L37.5,87.2 L75.0,103.8 L112.5,112.6 L150.0,57.3 L187.5,44.8 L225.0,59.5 L262.5,42.6 L300.0,77.9"/></svg>
+              <i class="ax"></i>
+            </div>
+            <svg class="ptr" viewBox="0 0 18 22"><path d="M1 1 L1 18 L5.5 13.5 L9 21 L12 19.6 L8.6 12.4 L15 12.4 Z"/></svg>
+            <i class="chk" style="top:432px;--d:.5s"></i>
+            <div class="status"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i></div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="depth" data-scene data-def="1">
+      <div class="pin">
+        <div class="wrap">
+          <div class="dstack">
+            <p class="c c2" aria-hidden="true">Simple by default, with depth one step away.</p>
+            <p class="c c1" aria-hidden="true">Simple by default, with depth one step away.</p>
+            <p class="front">Simple by default, with depth one step away.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap legacy" id="ch6" data-ch="6">
+      <h2 class="h2" data-r="0"><span class="num">06</span><span>What did eight weeks leave behind?</span></h2>
+      <p class="big" data-r="1">A direction the team could build on.</p>
+      <p class="lead" data-r="2" style="max-width:26em">The redesign became the reference for the team building the next version of the tool, and the approach to data context was the idea they took to most.</p>
+    </section>
+
+    <section class="wrap" id="ch7" data-ch="7" data-dark style="padding-top:200px;padding-bottom:160px">
+      <h2 class="h2" data-r="0"><span class="num">07</span><span>Want to see it?</span></h2>
+      <p class="lead" data-r="1" style="color:var(--muted);max-width:26em">How these ideas actually work is under NDA, so on this page this is all I can show. You can connect with me over email and I'd be glad to walk you through the rest!</p>
+      <p class="email" data-r="2"><a class="link" href="mailto:asharma5103@gmail.com">asharma5103@gmail.com<span class="arrow" aria-hidden="true"><svg viewBox="0 0 28 22"><path d="M0 11h26M17 2l9 9-9 9"/></svg></span></a></p>
+    </section>
+
+    <section class="wrap" id="ch8" data-ch="8" data-ball style="padding-top:160px">
+      <h2 class="h2" data-r="0"><span class="num">08</span><span>Looking back</span></h2>
+      <p class="lead" data-r="1" style="max-width:26em">The biggest lesson was a new process (for me): I let each week's ideas shape the concept, then brought it all together at the end.</p>
+      <div class="table" aria-hidden="true"><i class="net"></i><i class="shadow"></i><i class="ball"></i></div>
+      <div class="back">
+        <p data-r="0">And my designs weren't the only thing that improved. Thanks to my mentor, so did my table tennis.</p>
+        <p data-r="1">I left D.E. Shaw with a new way of working and real gratitude to the people who made those eight weeks what they were.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <svg class="logo" viewBox="0 0 90 21" role="img" aria-label="D.E. Shaw"><path fill="currentColor" d="M20.0107 8.84774V11.5146H19.5639C19.117 9.61174 18.7999 9.35227 17.2286 9.35227H15.4988V13.4174C17.6755 13.3885 18.007 13.0426 18.0647 11.8173H18.5548V15.5076H18.0503C17.9926 14.3111 17.6466 13.9652 15.4988 13.9507V18.6213H15.7871C19.1314 18.6213 19.5206 17.8429 19.7657 16.041H20.2702L20.0107 19.1258H12.6157V18.6213H13.9275V9.33786H12.6157V8.84774H20.0107ZM69.8299 5.22951H86.4507V5.73404H69.8299V5.22951ZM68.1145 0.400391L56.5534 5.25833H0.449219V5.76287H56.6543L68.3163 0.890511L68.1145 0.443637M6.83518 18.8375C5.92702 19.0826 5.00444 19.1691 4.06745 19.1258H0.449219V18.6213H1.76101V9.33786H0.449219V8.84774H4.06745C4.99003 8.80449 5.92702 8.9054 6.82077 9.13604C8.85332 9.74148 9.89122 11.3992 9.89122 13.994C9.89122 16.5887 8.86773 18.2465 6.83518 18.8375ZM6.46038 9.71265C5.69637 9.42435 4.87471 9.30903 4.06745 9.33786H3.33227V18.6213H4.06745C4.88912 18.6645 5.69637 18.5348 6.46038 18.2753C7.65685 17.7131 8.16139 16.459 8.16139 13.994C8.16139 11.529 7.68568 10.2748 6.46038 9.71265ZM54.1317 19.1402L55.7462 12.2209H56.7552V11.7164H53.9443V12.2209H55.184L53.9154 17.5834L53.6127 16.3581L52.4595 12.4083H51.4072L49.9224 17.5834L49.6773 16.3437L48.6971 12.2065H49.8215V11.702H46.3763V12.2065H47.3565L49.0142 19.1114H50.0666L51.5658 13.8066L51.9117 15.1616L53.0794 19.1114L54.1317 19.1402ZM83.4956 11.6011C85.8308 11.6011 86.9408 12.7975 86.9408 15.4499C86.9408 18.1023 85.8308 19.2988 83.4956 19.2988C81.1603 19.2988 80.0647 18.0591 80.0647 15.4355C80.0647 12.7975 81.1603 11.5866 83.4956 11.5866M83.4956 12.0768C82.6595 12.0768 81.6072 12.4804 81.6072 15.4211C81.6072 18.3618 82.6595 18.7654 83.4956 18.7654C84.3317 18.7654 85.3984 18.3618 85.3984 15.4211C85.3984 12.4804 84.3461 12.0479 83.4956 12.0479V12.0768ZM78.8827 9.15046C77.9601 8.8189 76.9654 8.66034 75.9852 8.70358C72.54 8.70358 70.8101 10.5487 70.8101 13.994C70.8101 17.3672 72.5255 19.2844 75.9852 19.2844C76.9799 19.2988 77.9601 19.1114 78.8683 18.7222L79.0989 16.0698H78.5944C78.2628 17.7708 77.3547 18.751 75.8843 18.751C75.1491 18.8087 74.4284 18.5636 73.8662 18.0735C73.0877 17.3239 72.6697 15.9977 72.6697 14.0084C72.6697 12.0191 73.1022 10.5776 73.9527 9.84239C74.4428 9.42435 75.0771 9.22253 75.7113 9.23695C77.297 9.23695 78.1475 10.2172 78.4214 11.5001H78.8683L78.8827 9.15046ZM29.7987 9.17929C28.977 8.86215 28.0977 8.70358 27.204 8.73241C25.0417 8.73241 23.8164 9.77031 23.8164 11.4137C23.8164 12.884 24.6092 13.6336 25.9787 14.1958L27.3769 14.7868C27.3769 14.7868 28.8185 15.9112 28.8185 16.8626C28.8185 18.0879 28.1265 18.7654 26.8292 18.7654C25.5318 18.7654 24.4795 17.7996 24.0758 16.0554H23.629L23.8596 18.7366C24.7101 19.1114 25.6471 19.2988 26.5697 19.2844C28.7752 19.2844 30.2456 18.16 30.2456 16.2139C30.2456 14.5562 29.3374 13.9075 27.9824 13.3453L26.6273 12.7831C25.6759 12.3939 25.2723 11.9182 25.2723 10.8803C25.2723 9.84239 26.0363 9.25136 27.0166 9.25136C28.2995 9.25136 29.0203 10.0298 29.3086 11.5434H29.7987V9.17929ZM38.001 13.6624C38.001 12.1632 37.0496 11.529 35.9684 11.529C34.9594 11.5001 34.0224 12.0191 33.5178 12.884V8.81891H31.0817V9.32344H32.0907V18.6213H31.0817V19.1258H34.5846V18.6213H33.5178V14.5562C33.5034 14.0661 33.6332 13.5904 33.8638 13.1579C34.1809 12.5957 34.772 12.2353 35.4351 12.2209C36.1702 12.2209 36.5739 12.7399 36.5739 13.6624V18.6357H35.5216V19.1402H39.0101V18.6213H38.001V13.6336M45.5113 16.8482V13.5904C45.5113 12.0912 44.4302 11.5578 42.7724 11.5578C41.1147 11.5578 39.9615 12.1488 39.9615 13.2156C39.9615 13.6336 40.293 13.9652 40.7111 13.9796H40.7975C41.057 14.0084 41.3165 13.9075 41.5039 13.7057V13.3597C41.5039 12.5092 41.9219 12.0335 42.7436 12.0335C43.3923 11.947 43.9833 12.4083 44.0554 13.0426C44.0698 13.1291 44.0698 13.2156 44.0554 13.3165V14.4264L41.6048 15.2049C40.9273 15.4499 39.7885 15.8536 39.7885 17.1798C39.7885 18.6501 40.812 19.2988 42.1526 19.2988C43.2337 19.2988 43.9689 18.924 44.3293 18.1023C44.5311 19.0105 45.4104 19.3709 46.4339 19.1691V18.7222C45.9294 18.5636 45.5258 17.9438 45.5258 16.8626M44.1275 16.8482C44.1275 18.0447 43.6374 18.6069 42.7292 18.6069C41.9219 18.6069 41.4606 18.0591 41.4606 17.1653C41.4606 15.8824 42.1237 15.6517 43.0031 15.349L44.1275 14.9598V16.8482ZM66.4711 17.8284C67.3793 16.877 67.855 15.5941 67.7829 14.2679C67.7685 13.648 67.6676 13.0426 67.4802 12.4516H65.044V12.8984C65.6062 12.8696 66.1684 13.057 66.5865 13.4318C66.9613 13.8498 67.1631 14.412 67.1198 14.9742C67.1198 15.8968 66.7594 16.7905 66.1252 17.4681C66.0243 17.3527 65.8369 17.1798 65.736 17.0644C64.2368 15.5508 62.9394 13.8354 61.9159 11.9758C61.6997 11.5722 61.5699 11.1109 61.5555 10.6496C61.4979 9.88563 62.0745 9.22253 62.8385 9.16487C62.9106 9.16487 62.9682 9.16487 63.0403 9.16487C64.0061 9.16487 64.7413 9.72707 65.0729 11.4281H65.5197V9.16487C64.799 8.83332 64.0061 8.67475 63.2133 8.718C61.4979 8.718 60.287 9.52525 60.287 11.183C60.3014 11.7308 60.4311 12.2642 60.6762 12.7687C59.4509 13.1867 58.6581 14.3544 58.7013 15.6517C58.7013 17.4392 60.0563 19.3421 62.7664 19.3421C63.7034 19.3709 64.626 19.1402 65.4476 18.6789C66.1972 19.0537 67.0045 19.27 67.8406 19.3132L67.9847 18.9096C67.437 18.6213 66.9324 18.2609 66.4711 17.8573M63.5304 18.7078C62.6078 18.7222 61.7141 18.3762 61.0366 17.7275C60.3735 17.0356 60.0131 16.113 60.0275 15.1472C59.9698 14.3688 60.2437 13.6048 60.7915 13.057C61.7429 14.8445 62.9826 16.4734 64.4386 17.8861C64.6116 18.0591 64.799 18.2321 65.0008 18.3906C64.5539 18.5925 64.0494 18.7078 63.5304 18.7078Z"/></svg>
+    <p>Interaction Design Intern · Summer 2026</p>
+  </footer>
+</div>
+</body>
+</html>
